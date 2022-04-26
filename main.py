@@ -21,16 +21,15 @@ KAKTUS = [pygame.image.load(os.path.join("Assets/kaktus", "LargeCactus1.png")),
                 pygame.image.load(os.path.join("Assets/kaktus", "LargeCactus2.png")),
                 pygame.image.load(os.path.join("Assets/kaktus", "LargeCactus3.png"))]
 
-BIRD = [pygame.image.load(os.path.join("Assets/burung", "bird1-01.png")),
-        pygame.image.load(os.path.join("Assets/burung", "bird1-02.png"))]
+BIRD = [pygame.image.load(os.path.join("Assets/burung", "burunggg1-01.png")),
+        pygame.image.load(os.path.join("Assets/burung", "burunggg2-01.png"))]
 
 CLOUD = pygame.image.load(os.path.join("Assets/Other", "awan.png"))
 
 BG = pygame.image.load(os.path.join("Assets/Other", "jalan-01.png"))
 
-
 class Dinosaur:
-    X_POS = 80 
+    X_POS = 80 # bertuju
     Y_POS = 310
     Y_POS_DUCK = 340
     JUMP_VEL = 8.5
@@ -102,7 +101,7 @@ class Dinosaur:
         SCREEN.blit(self.image, (self.dino_rect.x, self.dino_rect.y))
 
 
-class Cloud:
+class Cloud: 
     def __init__(self):
         self.x = SCREEN_WIDTH + random.randint(800, 1000)
         self.y = random.randint(50, 100)
@@ -235,7 +234,33 @@ def main():
         clock.tick(30)
         pygame.display.update()
 
+class buff:
+    def __init__(self, image, type):
+        self.image = image
+        self.type = type
+        self.rect = self.image[self.type].get_rect()
+        self.rect.x = SCREEN_WIDTH
 
+    def update(self):
+        self.rect.x -= game_speed
+        if self.rect.x < -self.rect.width:
+            buff.pop()
+
+    def draw(self, SCREEN):
+        SCREEN.blit(self.image[self.type], self.rect)
+
+class kecepetanmenurun(buff):
+    def __init__(self, image):
+        self.type = 0
+        super().__init__(image, self.type)
+        self.rect.y = 250 #250 adalah 
+        self.index = 0
+
+    def draw(self, SCREEN):
+        if self.index >= 9:
+            self.index = 0
+        SCREEN.blit(self.image[self.index//5], self.rect)
+        self.index += 1
 def menu(death_count):
     global points
     run = True
