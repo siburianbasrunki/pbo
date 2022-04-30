@@ -28,13 +28,6 @@ AWAN = pygame.image.load(os.path.join("Assets/Other", "awan.png"))
 
 BG = pygame.image.load(os.path.join("Assets/Other", "jalan-01.png"))
 
-
-# musik
-# MUSIK = pygame.mixer.music.load(os.path.join("Assets/musik", "musik.mp3"))
-# pygame.mixer.music.play(-1)
-MLOMPAT = pygame.mixer.Sound(os.path.join("Assets/musik", "smb_jump-super.wav"))
-MNUNDUK = pygame.mixer.Sound(os.path.join("Assets/musik", "smb_kick.wav"))
-GAMESELESAI = pygame.mixer.Sound(os.path.join("Assets/musik", "smb_gameover.wav"))
 #class dinosaurus
 
 class dinosaur:
@@ -89,7 +82,6 @@ class dinosaur:
         self.rect_dino.x = self.POSISI_X
         self.rect_dino.y =self.POSISI_Y_NUNDUK
         self.langkah_index += 1
-        MNUNDUK.play()
 
     def lari(self):
         self.image = self.image_lari[self.langkah_index // 5] # 5 artinya gambar lari akan dijalankan setiap 5 frame
@@ -99,9 +91,7 @@ class dinosaur:
         self.langkah_index += 1
     
     def lompat(self):
-        MLOMPAT.play()
         self.image = self.lompat_img
-        
         if self.dino_lompat:
             self.rect_dino.y -= self.nilai_lompat * 4
             self.nilai_lompat -= 0.8
@@ -129,12 +119,12 @@ class Awan :
         LAYAR.blit(self.image, (self.x, self.y))
         
 class Rintangan : 
-
     def __init__(self, gambar, type):
         self.image = gambar
         self.type = type
         self.rect = self.image[self.type].get_rect()
         self.rect.x = LEBAR_LAYAR
+        
     def update(self) : 
         self.rect.x -= kecepatan_game
         if self.rect.x < -self.rect.width : 
@@ -148,7 +138,6 @@ class BatuKecil(Rintangan):
         self.type = random.randint(0, 2)
         super().__init__(gambar, self.type)
         self.rect.y = 325
-        
         
 class BatuBesar(Rintangan):
     def __init__(self, gambar): 
@@ -183,6 +172,7 @@ def main():
     font = pygame.font.Font('freesansbold.ttf', 20)
     rintangan = []
     death_count = 0
+    
     def score():
         global point, kecepatan_game
         point += 1
@@ -228,7 +218,6 @@ def main():
             if player.rect_dino.colliderect(Rintangan.rect):
                 pygame.time.delay(2000)
                 death_count += 1
-                GAMESELESAI.play()
                 menu(death_count)
                 
         background()
