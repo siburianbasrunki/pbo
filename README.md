@@ -17,7 +17,7 @@ yang mampu berlari, menunduk dan melompat untuk melewati rintangan yang terdiri 
 ## Dependensi Paket (Library)
 - import BackgroundBrowser
 - import pygame
-- import os _os adalah library untuk mengakses file_
+- import os _(os adalah library untuk mengakses file)_
 - import random
 
 
