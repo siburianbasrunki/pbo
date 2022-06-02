@@ -1,3 +1,4 @@
+from webbrowser import BackgroundBrowser
 import pygame
 import os # os adalah library untuk mengakses file 
 import random
@@ -27,7 +28,6 @@ BURUNG = [pygame.image.load(os.path.join("Assets/burung", "burunggg1-01.png")),
 AWAN = pygame.image.load(os.path.join("Assets/Other", "awan.png"))
 
 BG = pygame.image.load(os.path.join("Assets/Other", "jalan-01.png"))
-
 
 # musik
 # MUSIK = pygame.mixer.music.load(os.path.join("Assets/musik", "musik.mp3"))
