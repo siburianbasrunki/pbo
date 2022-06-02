@@ -15,6 +15,10 @@ Program ini menggunakan modul pygame, dengan menerapkan pemrograman berorintasi 
 yang mampu berlari, menunduk dan melompat untuk melewati rintangan yang terdiri dari kaktus, batu dan burung. Game Dinosaurus ini ketika dimainkan semakin lama dino bertahan maka score yang diperoleh semakin banyak dan juga tingkat kesulitan semakin cepat (objek dino semakin cepat berlari untuk melewati rintangan).
 #
 ## Dependensi Paket (Library)
+- import BackgroundBrowser
+- import pygame
+- import os _os adalah library untuk mengakses file_
+- import random
 
 
 ## Cara Menjalankan Game Dinosaur
