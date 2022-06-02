@@ -22,6 +22,10 @@ Program ini menggunakan modul pygame, dengan menerapkan pemrograman berorintasi 
 
 
 ## Cara Menjalankan Game Dinosaur
+Cara memainkan game ini adalah dengan menggunakan :
+- tombol panah ke **atas** untuk **melompat**
+- tombol panah ke **bawah** untuk **menunduk**
+Dan Dino tidak boleh menabrak objek **kaktus, batu (besar dan kecil), dan burung**, untuk mendapatkan hasil score yang tinggi
 
 
 ## UML Class Diagram Proyek
