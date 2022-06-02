@@ -18,4 +18,4 @@ yang mampu berlari, menunduk dan melompat untuk melewati rintangan yang terdiri 
 
 
 ## UML Class Diagram Proyek
-![](https://user-images.githubusercontent.com/90511661/171586061-8b8d0466-a3cf-424f-af88-3912b6e11076.jpeg)
+   ![](https://user-images.githubusercontent.com/90511661/171586061-8b8d0466-a3cf-424f-af88-3912b6e11076.jpeg)
