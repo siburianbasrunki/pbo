@@ -1,11 +1,11 @@
 # DINOSAUR
-###anggota kelompok :
-####Duta Rega Rolindo Simorangkir - 120140135
-####Basrunki Siburian - 120140007
-####Gracia Sherianta Br Sitepu - 120140084
-####Noviana Gresita Perangin-Angin - 120140239
-####Oloan Soaloon Napitupulu - 120140097
-####Alief Arrly Prasetyo - 120140207
+### Anggota Kelompok RC-04 :
+#### Duta Rega Rolindo Simorangkir - 120140135
+#### Basrunki Siburian - 120140007
+#### Gracia Sherianta Br Sitepu - 120140084
+#### Noviana Gresita Perangin-Angin - 120140239
+#### Oloan Soaloon Napitupulu - 120140097
+#### Alief Arrly Prasetyo - 120140207
 #
 ## Deskripsi Program Game Dinosaur
 Program ini menggunakan modul pygame, dengan menerapkan pemrograman berorintasi objek (PBO). Pada game Dinosaur ini, objek dinosaurus sebagai objek utama 
